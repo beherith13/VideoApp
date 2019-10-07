@@ -8,13 +8,21 @@
 
 import UIKit
 
-enum Storyboard: String {
-    case main = "Main"
+protocol IdentifiableStoryboard: RawRepresentable where RawValue == String {
+    static var identifier: String { get }
 }
 
-extension Storyboard {
-    func viewController<ViewController: UIViewController>(withIdentifier identifier: String) -> ViewController {
-        let storyboard = UIStoryboard(name: rawValue, bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: identifier) as! ViewController
+enum Storyboard {
+    enum Main: String, IdentifiableStoryboard {
+        static let identifier = "Main"
+        
+        case videoGallery = "VideoGallery"
+    }
+}
+
+extension IdentifiableStoryboard {
+    static func viewController<ViewController: UIViewController>(withIdentifier identifier: Self) -> ViewController {
+        let storyboard = UIStoryboard(name: self.identifier, bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: identifier.rawValue) as! ViewController
     }
 }

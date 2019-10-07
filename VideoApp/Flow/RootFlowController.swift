@@ -20,7 +20,7 @@ class RootFlowController {
     }
     
     private func openVideoGallery() {
-        let viewController: VideoGalleryViewController = Storyboard.main.viewController(withIdentifier: "VideoGallery")
+        let viewController: VideoGalleryViewController = Storyboard.Main.viewController(withIdentifier: .videoGallery)
 
         let context = VideoGallery.Context(
             service: VideoLibrary.Service(),
