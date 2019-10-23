@@ -42,7 +42,7 @@ extension VideoGalleryItem {
         let focused: Driver<Bool>
 
         init(data: Data, input: Input) {
-            focused = input.focus.startWith(false)
+            focused = input.focus.startWith(false).distinctUntilChanged()
             imageURL = .just(data.galleryImageURL)
             title = .just(data.titleDefault)
             channel = .just(data.tvShow.titleDefault)

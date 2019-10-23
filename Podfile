@@ -11,6 +11,9 @@ target 'VideoApp' do
   target 'VideoAppTests' do
     inherit! :search_paths
     # Pods for testing
+    pod "RxTest"
+    pod "Quick"
+    pod "Nimble"
   end
 
 end

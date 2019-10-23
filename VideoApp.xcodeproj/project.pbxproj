@@ -33,6 +33,7 @@
 		627DC4DC23255535003194C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627DC4D923255535003194C7 /* Main.storyboard */; };
 		627DC4DD23255535003194C7 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627DC4DB23255535003194C7 /* Storyboard.swift */; };
 		627DC4DF23257FAB003194C7 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627DC4DE23257FAB003194C7 /* BaseService.swift */; };
+		62DB768A2360EC7700543F1D /* VideoGalleryItemViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB76892360EC7700543F1D /* VideoGalleryItemViewModelSpec.swift */; };
 		FE8F780C470EFC5805AA0EED /* Pods_VideoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA1BD2FB69FE7AE2ED5A9E1 /* Pods_VideoAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		627DC4DA23255535003194C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		627DC4DB23255535003194C7 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		627DC4DE23257FAB003194C7 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		62DB76892360EC7700543F1D /* VideoGalleryItemViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGalleryItemViewModelSpec.swift; sourceTree = "<group>"; };
 		8541B6357CFBF35EED283179 /* Pods-VideoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoAppTests.release.xcconfig"; path = "Target Support Files/Pods-VideoAppTests/Pods-VideoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C6B96820005157A32776058 /* Pods-VideoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-VideoAppTests/Pods-VideoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D1B441F480E31FDD56DB2308 /* Pods-VideoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoApp.debug.xcconfig"; path = "Target Support Files/Pods-VideoApp/Pods-VideoApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				621F7EC123303D0300BD8DB9 /* Mock */,
 				621F7EB72330261700BD8DB9 /* VideoGalleryViewModelTests.swift */,
+				62DB76892360EC7700543F1D /* VideoGalleryItemViewModelSpec.swift */,
 				6229D3772322C97600CFB6EF /* Info.plist */,
 			);
 			path = VideoAppTests;
@@ -295,6 +298,7 @@
 				6229D36D2322C97600CFB6EF /* Sources */,
 				6229D36E2322C97600CFB6EF /* Frameworks */,
 				6229D36F2322C97600CFB6EF /* Resources */,
+				60C76D9E84E32CD760A84213 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -396,6 +400,36 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoApp/Pods-VideoApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		60C76D9E84E32CD760A84213 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VideoAppTests/Pods-VideoAppTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VideoAppTests/Pods-VideoAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6F375DCA753FDF57D2A19CA3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -477,6 +511,7 @@
 				621F7EC523303D0300BD8DB9 /* VideoMock.swift in Sources */,
 				621F7EC623303D0300BD8DB9 /* VideoGalleryItemViewModelMock.swift in Sources */,
 				621F7EC723303D0300BD8DB9 /* VideoServiceMock.swift in Sources */,
+				62DB768A2360EC7700543F1D /* VideoGalleryItemViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

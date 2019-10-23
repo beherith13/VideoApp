@@ -1,6 +1,8 @@
 PODS:
   - Differentiator (3.1.0)
   - Kingfisher (5.2.0)
+  - Nimble (8.0.1)
+  - Quick (2.0.0)
   - RxAtomic (4.4.2)
   - RxCocoa (4.4.2):
     - RxSwift (>= 4.4.2, ~> 4.4)
@@ -10,29 +12,41 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.4.2):
     - RxAtomic (>= 4.4.2, ~> 4.4)
+  - RxTest (4.4.2):
+    - RxAtomic (>= 4.4.2, ~> 4.4)
+    - RxSwift (>= 4.4.2, ~> 4.4)
 
 DEPENDENCIES:
   - Kingfisher
+  - Nimble
+  - Quick
   - RxDataSources
   - RxSwift
+  - RxTest
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Differentiator
     - Kingfisher
+    - Nimble
+    - Quick
     - RxAtomic
     - RxCocoa
     - RxDataSources
     - RxSwift
+    - RxTest
 
 SPEC CHECKSUMS:
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
   RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
+  RxTest: 6433d5b6229f5de424fa534bc22b5e6c38b0b671
 
-PODFILE CHECKSUM: 49559dce2b482ff5ebcb1ec376ed3d7beb2e7a03
+PODFILE CHECKSUM: 6b292d15e5265e6f206282714f54a5c3ce12f328
 
 COCOAPODS: 1.6.1

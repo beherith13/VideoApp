@@ -10,7 +10,14 @@ import Foundation
 @testable import VideoApp
 
 extension Video {
-    static let stub: [Video] = [
+    static let stub: Video =
+        Video(
+            imageURL: URL(string: "http://mockvideogallery1.com")!,
+            titleDefault: "title1",
+            tvShow: TVShow(channelId: 1, titleDefault: "showTitle1")
+    )
+    
+    static let stubArray: [Video] = [
         Video(
             imageURL: URL(string: "http://mockvideogallery1.com")!,
             titleDefault: "title1",

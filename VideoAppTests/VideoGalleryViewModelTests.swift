@@ -73,7 +73,7 @@ class VideoGalleryViewModelTests: XCTestCase {
         enableSubject.onNext(true)
         
         XCTAssertTrue(isLoadingRelay.value)
-        service.send(Video.stub)
+        service.send(Video.stubArray)
         XCTAssertFalse(isLoadingRelay.value)
     }
     
@@ -91,13 +91,13 @@ class VideoGalleryViewModelTests: XCTestCase {
         retrySubject.onNext(())
 
         XCTAssertTrue(isLoadingRelay.value)
-        service.send(Video.stub)
+        service.send(Video.stubArray)
         XCTAssertFalse(isLoadingRelay.value)
     }
     
     func testItemsOnEnable() {
         enableSubject.onNext(true)
-        service.send(Video.stub)
+        service.send(Video.stubArray)
         
         XCTAssertNil(errorRelay.value)
         XCTAssertEqual(itemsRelay.value.count, 2)
@@ -115,7 +115,7 @@ class VideoGalleryViewModelTests: XCTestCase {
         enableSubject.onNext(true)
         service.send(API.Error.malformedURL)
         retrySubject.onNext(())
-        service.send(Video.stub)
+        service.send(Video.stubArray)
         
         XCTAssertNil(errorRelay.value)
         XCTAssertEqual(itemsRelay.value.count, 2)
@@ -123,7 +123,7 @@ class VideoGalleryViewModelTests: XCTestCase {
     
     func testNoFocusAfterInit() {
         enableSubject.onNext(true)
-        service.send(Video.stub)
+        service.send(Video.stubArray)
         
         itemMocks.forEach {
             XCTAssertTrue($0?.focusedRelay.value == false)
@@ -132,7 +132,7 @@ class VideoGalleryViewModelTests: XCTestCase {
 
     func testFocusFirstItem() {
         enableSubject.onNext(true)
-        service.send(Video.stub)
+        service.send(Video.stubArray)
         focusSubject.onNext(0)
         
         XCTAssertTrue(itemMocks[0]?.focusedRelay.value == true)
@@ -141,7 +141,7 @@ class VideoGalleryViewModelTests: XCTestCase {
 
     func testFocusChange() {
         enableSubject.onNext(true)
-        service.send(Video.stub)
+        service.send(Video.stubArray)
         focusSubject.onNext(0)
         focusSubject.onNext(1)
         
@@ -151,7 +151,7 @@ class VideoGalleryViewModelTests: XCTestCase {
 
     func testNoSelectionWithoutFocus() {
         enableSubject.onNext(true)
-        service.send(Video.stub)
+        service.send(Video.stubArray)
         selectSubject.onNext(())
         
         XCTAssertNil(openedVideo)
@@ -159,10 +159,10 @@ class VideoGalleryViewModelTests: XCTestCase {
     
     func testSelectionWithFocus() {
         enableSubject.onNext(true)
-        service.send(Video.stub)
+        service.send(Video.stubArray)
         focusSubject.onNext(1)
         selectSubject.onNext(())
 
-        XCTAssertEqual(openedVideo, Video.stub[1])
+        XCTAssertEqual(openedVideo, Video.stubArray[1])
     }
 }
