@@ -39,8 +39,7 @@ class VideoGalleryViewController: UIViewController {
             .didUpdateFocusInContextWithAnimationCoordinator
             .asSignal()
             .map { $0.context.nextFocusedIndexPath?.row }        
-        let select = collectionView.rx.itemSelected.asSignal().map { _ in () }
-        //gestureRecognizer.rx.event.asSignal().map { _ in () }
+        let select = gestureRecognizer.rx.event.asSignal().map { _ in () }
         let retry = retryButton.rx.controlEvent(.primaryActionTriggered).asSignal()
         
         let input = VideoGallery.Input(
