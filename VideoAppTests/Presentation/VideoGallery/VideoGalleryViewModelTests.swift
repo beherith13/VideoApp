@@ -9,6 +9,7 @@
 import XCTest
 import RxSwift
 import RxCocoa
+
 @testable import VideoApp
 
 class VideoGalleryViewModelTests: XCTestCase {
